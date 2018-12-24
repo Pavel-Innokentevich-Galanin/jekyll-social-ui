@@ -12,23 +12,29 @@
     align-items: center;
 }
 
-.profile-container
+.profile__container
 {
     width: 100%;
     height: 110px;
     padding: 0 50px;
 }
 
-.profile-img
+.profile__img
 {
     float: left;
 
+    height: 100%;
+}
+
+.profile__img > img
+{
+    width: 100%;
     height: 100%;
 
     border-radius: 50%;
 }
 
-.profile-name-and-status
+.profile__name-and-status
 {
     display: flex;
     float: left;
@@ -43,7 +49,7 @@
     align-items: center;
 }
 
-.profile-name
+.profile__name
 {
     font-size: 2em;
 
@@ -51,10 +57,12 @@
 
     width: 100%;
 
+    text-decoration: none;
+
     color: #3f4f5f;
 }
 
-.profile-name > i
+.profile__name > i
 {
     font-size: .3em;
 
@@ -68,7 +76,7 @@
     background-color: #a6bad1;
 }
 
-.profile-status
+.profile__status
 {
     width: 100%;
 
