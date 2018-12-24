@@ -8,80 +8,63 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>  
-        <div class="page__wrapper">
-            <div class="page__content">
-                <header class="page__header page__container">
-                    <div class="header__top">
-                        <div class="header__top-b-name">
-                            <span class="header__top-name">
-                                <a href="#">SOCIAL UI</a>
-                            </span>
-                        </div>
-                        <nav class="header__top-menu">
-                            <ul>
-                                <li><a class="fas fa-bell" href="#"></a></li>
-                                <li><a class="fas fa-users" href="#"></a></li>
-                                <li><a class="fas fa-comments" href="#"></a></li>
-                            </ul>
-                        </nav>
-                        <nav class="header__top-menu-2">
-                            <ul>
-                                <li><a class="fas fa-user-circle" href="#"> <i class="fas fa-caret-down"></i></a></li>
-                                <li><a class="fas fa-search" href="#"></a></li>
-                                <li><a class="fas fa-sign-out-alt" href="#"></a></li>
-                            </ul>
-                        </nav>
-                        <div class="header__b-name-people">
-                            <span class="header__name-people">
-                                <a href="#">John Doe</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="header__bottom">
-                        <nav class="header__bottom-menu">
-                            <ul>
-                                <li class="active"><a href="#">Dialogues</a></li>
-                                <li><a href="#">Photos</a></li>
-                                <li><a href="#">Videos</a></li>
-                                <li><a href="#">Music</a></li>
-                                <li><a href="#">Communities</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
-                <div class="page__profile page__container">
-                    <div class="page__profile-container">
-                        <img class="page__profile-img" src="./assets/img/profile/profile.jpg" alt="profile img">
-                        <div class="page__profile-name-and-status">
-                            <div class="page__profile-name">John Doe <i class="fas fa-check"></i></div>
-                            <div class="page__profile-status">
+        <div class="wrapper">
+            <div class="content">
+                <!-- header -->
+                <header class="header container">
+                    <nav class="header__top">
+                        <!-- header__top-menu-1 -->
+                        <ul class="header__top-menu-1">
+                            <li><a href="#">Social UI</a></li>
+                            <li><a href="#"><span class="fas fa-bell"></span><span class="header__top-menu-1-bell">1</span></a></li>
+                            <li><a href="#"><span class="fas fa-users"></span></a></li>
+                            <li><a href="#"><span class="fas fa-comments"></span></a></li>
+                        </ul><!-- /header__top-menu-1 -->
+                        <!-- header__top-menu-2 -->
+                        <ul class="header__top-menu-2">
+                            <li><a href="#"><span>John Doe</span><span class="fas fa-user-circle"></span></a></li>
+                            <li><a href="#"><span class="fas fa-search"></span></a></li>
+                            <li><a href="#"><span class="fas fa-sign-out-alt"></span></a></li>
+                        </ul><!-- /header__top-menu-2 -->
+                    </nav>
+                    <!-- header__bottom -->
+                    <nav class="header__bottom">
+                        <ul class="header__bottom-menu">
+                            <li class="current"><a href="#">Dialogues</a></li>
+                            <li><a href="#">Photos</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Communities</a></li>
+                        </ul>
+                    </nav><!-- /header__bottom -->
+                </header><!-- /header -->
+                <!-- profile -->
+                <div class="profile container">
+                    <div class="profile-container">
+                        <img class="profile-img" src="./assets/img/profile/profile.jpg" alt="profile img">
+                        <div class="profile-name-and-status">
+                            <div class="profile-name">John Doe <i class="fas fa-check"></i></div>
+                            <div class="profile-status">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, quisquam!
                             </div>
                         </div>
-                        <ul class="page__profile-ffpv">
-                            <li><a href="#"><span class="page__profile-ffpv-value">1121</span><span class="page__profile-ffpv-info">Followers</span></a></li>
-                            <li><a href="#"><span class="page__profile-ffpv-value">5,356</span><span class="page__profile-ffpv-info">Following</span></a></li>
-                            <li><a href="#"><span class="page__profile-ffpv-value">502</span><span class="page__profile-ffpv-info">Photos</span></a></li>
-                            <li><a href="#"><span class="page__profile-ffpv-value">789</span><span class="page__profile-ffpv-info">Videos</span></a></li>
+                        <ul class="profile-ffpv">
+                            <li><a href="#"><span class="profile-ffpv-value">1121</span><span class="profile-ffpv-info">Followers</span></a></li>
+                            <li><a href="#"><span class="profile-ffpv-value">5,356</span><span class="profile-ffpv-info">Following</span></a></li>
+                            <li><a href="#"><span class="profile-ffpv-value">502</span><span class="profile-ffpv-info">Photos</span></a></li>
+                            <li><a href="#"><span class="profile-ffpv-value">789</span><span class="profile-ffpv-info">Videos</span></a></li>
                         </ul>
-                        <div class="page__profile-buttons">
+                        <div class="profile-buttons">
                             <a href="#">Send Message</a>
                             <a href="#">Add Friend</a>
                         </div>
                     </div>
-                </div>
-                <div class="page__blocks page__container">
-                    <div class="page__activity-feed"></div>
-                    <div class="page__people-to-follow"></div>
-                    <div class="page__msg"></div>
-                </div>
-                <div class="page__msgs page__container">
-                    
-                </div>
-            </div>
-            <footer class="page__footer">
-            </footer>
-        </div>
+                </div><!-- /profile -->
+            </div><!-- /content -->
+            <!-- footer -->
+            <footer class="footer">
+            </footer><!-- /footer -->
+        </div><!-- /wrapper -->
     </body>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </html>

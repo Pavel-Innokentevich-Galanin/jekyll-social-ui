@@ -30,7 +30,6 @@ const
         './assets/less/preloader/**/*.less',
         './assets/less/header/**/*.less',
         './assets/less/footer/**/*.less',
-        './assets/less/index/**/*.less',
         './assets/less/*.less',
     ],
     js_files = [
@@ -86,7 +85,7 @@ gulp.task('serve',
         browserSync(
             {
                 server: "./",
-                tunnel: true,
+                // tunnel: true,
             }
         );
     }
