@@ -1,5 +1,7 @@
 .people-to-follow__people
 {
+    position: relative;
+
     height: 50px;
     padding: 11px 23px;
 }
@@ -19,6 +21,19 @@
 {
     width: 100%;
     height: 100%;
+}
+
+.people-to-follow__people-img > i
+{
+    position: absolute;
+    top: 45px;
+    left: 55px;
+
+    padding: 3px;
+
+    color: #00d905;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .people-to-follow__people-info
@@ -41,7 +56,16 @@
     align-items: center;
 }
 
-.people-to-follow__people-name-link
+.people-to-follow__people-name > i
+{
+    font-size: 14px;
+
+    margin-left: 8px;
+
+    color: #c5ccd4;
+}
+
+.people-to-follow__people-name > a
 {
     text-decoration: none;
 
@@ -58,7 +82,7 @@
     align-items: center;
 }
 
-.people-to-follow__people-button-link
+.people-to-follow__people-button > a
 {
     display: flex;
 
