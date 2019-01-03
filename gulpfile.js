@@ -1,81 +1,43 @@
 const
-    gulp         = require('gulp'),
-    min_HTML     = require('gulp-htmlmin'),
-    less         = require('gulp-less'),
-    path         = require('path'),
-    autoprefixer = require('gulp-autoprefixer'),
-    min_CSS      = require('gulp-cssnano'),
-    min_JS       = require('gulp-uglify'),
-    browserSync  = require('browser-sync'),
-    concat       = require('gulp-concat'),
-    notify       = require("gulp-notify");
-
-const
-    watch_HTML_files = [
-        './assets/html/*.html',
-    ];
-    watch_LESS_files = [
-        './assets/less/**/*.less',
-    ];
-    watch_JS_files = [
-        './assets/js/**/*.js',
-    ];
+    browserSync  = require("browser-sync"),
+    gulp         = require("gulp"),
+    autoprefixer = require("gulp-autoprefixer"),
+    min_CSS      = require("gulp-clean-css"),
+    concat       = require("gulp-concat"),
+    notify       = require("gulp-notify"),
+    SASS_to_CSS  = require("gulp-sass");
 
 const
     html_files = [
-        './assets/html/*.html',
-    ],
-    css_files = [
-        './assets/less/less-libs/**/*.less',
-        './assets/less/preloader/**/*.less',
-        './assets/less/header/**/*.less',
-        './assets/less/footer/**/*.less',
-        './assets/less/*.less',
-    ],
-    js_files = [
-        './assets/js/**/*.js',
+        "./*.html",
+        "./_includes/*.html"
     ];
-
-const
-    dest_HTML_files = './';
-    dest_LESS_files = './';
-    dest_JS_files = './';
 
 gulp.task('html',
     function ()
     {
         return gulp.src(html_files)
-            .pipe(min_HTML({ collapseWhitespace: true }))
-            .pipe(gulp.dest(dest_HTML_files))
             .pipe(browserSync.reload({stream: true}));
     }
 );
 
-gulp.task('less',
+gulp.task('css',
     function ()
     {
-        return gulp.src(css_files)
+        return gulp.src([
+                "./assets/sass/1-less-libs/**/*.sass",
+                "./assets/sass/**/*.sass"
+            ])
+            .pipe(concat('style.sass'))
+            .pipe(SASS_to_CSS({ outputStyle: 'expanded' }).on("error", notify.onError()))
             .pipe(concat('style.css'))
-            .pipe(less({
-                paths: [ path.join(__dirname, 'less', 'includes') ]
-            })).on("error", notify.onError())
             .pipe(autoprefixer({
                 browsers: ['last 300 versions']
             }))
             .pipe(min_CSS())
-            .pipe(gulp.dest(dest_LESS_files))
+            .pipe(gulp.dest("./"))
             .pipe(browserSync.reload({stream: true}));
-    }
-);
-
-gulp.task('js',
-    function ()
-    {
-        return gulp.src(js_files)
-            .pipe(concat('scripts.js'))
-            .pipe(min_JS()).on("error", notify.onError())
-            .pipe(gulp.dest(dest_JS_files))
-            .pipe(browserSync.reload({stream: true}));
+        
     }
 );
 
@@ -84,8 +46,11 @@ gulp.task('serve',
     {
         browserSync(
             {
-                server: "./",
-                // tunnel: true,
+                proxy: "127.0.0.1:4000",
+                open: false,
+                // notify: false,
+		        // online: false, // Work Offline Without Internet Connection
+                // tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
             }
         );
     }
@@ -94,10 +59,9 @@ gulp.task('serve',
 gulp.task('watch',
     function ()
     {
-        gulp.watch(watch_HTML_files, gulp.parallel('html'));
-        gulp.watch(watch_LESS_files, gulp.parallel('less'));
-        gulp.watch(watch_JS_files, gulp.parallel('js'));
+        gulp.watch(html_files, gulp.parallel('html'));
+        gulp.watch("./assets/sass/**/*.sass", gulp.parallel('css'));
     }
 );
 
-gulp.task('default', gulp.parallel('watch', 'html', 'less', 'js', 'serve'));
+gulp.task('default', gulp.parallel('watch', 'html', 'css', 'serve'));
