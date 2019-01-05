@@ -37,7 +37,6 @@ gulp.task('css',
             .pipe(min_CSS())
             .pipe(gulp.dest("./"))
             .pipe(browserSync.reload({stream: true}));
-        
     }
 );
 
