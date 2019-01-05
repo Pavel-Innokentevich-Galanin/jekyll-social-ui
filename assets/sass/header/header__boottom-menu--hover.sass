@@ -1,10 +1,12 @@
-.header__bottom > ul > li:hover > a
+.header__bottom a:hover,
+.header__bottom li.current a
     color: #667a90
 
-.header__bottom > ul > li
+.header__bottom > ul > li > a
     position: relative
 
-.header__bottom > ul > li:hover > a:after
+.header__bottom a:hover:after,
+.header__bottom li.current a:after
     position: absolute
     bottom: 0
     display: block
