@@ -1,2 +1,2 @@
 title: Web School Lectures
-exclude: [.git, assets, node_modules, .gitignore, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json]
+exclude: [.git, assets, node_modules, .gitignore, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
