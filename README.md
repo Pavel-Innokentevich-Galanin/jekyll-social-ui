@@ -1,4 +1,5 @@
 ## Web School Lectures
+Code easily with <strong>Flex Box</strong> and crying when open old browser :(
 
 ### Web hosting:
 - [GitHub Pages](https://pavelgalanin2001.github.io/web-school-lectures/)
