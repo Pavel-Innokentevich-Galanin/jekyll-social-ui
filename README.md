@@ -29,5 +29,5 @@
 (needs to be installed <strong>npm</strong>)
 
 ### Jekyll
-```$ bundle exec jekyll serve```
-(needs to be installed <strong>gem</strong>, <strong>jekyll</strong>, <strong>bundle</strong>)
+```$ jekyll serve```
+(needs to be installed <strong>gem</strong>, <strong>jekyll</strong>)
