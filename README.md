@@ -19,8 +19,9 @@
   - ```gulp-sass``` - compile SASS to CSS
 - Jekyll - HTML builder
 
-### Icons:
-- Font Awesome
+### Fonts:
+- Font Awesome (icons)
+- Open Sans
 
 ## How to run:
 
