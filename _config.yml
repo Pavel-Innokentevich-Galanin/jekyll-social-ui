@@ -1,7 +1,5 @@
 #Server
-source: "site"
-baseurl: ""
-exclude: [assets]
+exclude: [assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, README.md]
 
 #Social
 title: Web School Lectures

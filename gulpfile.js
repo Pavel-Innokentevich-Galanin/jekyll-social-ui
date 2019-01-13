@@ -7,21 +7,33 @@ var
     notify       = require("gulp-notify"),
     SASS_to_CSS  = require("gulp-sass");
 
+var
+    proxy = "127.0.0.1:4000",
+
+    HTML_files = [
+        "./*.html",
+        "./_includes/**/*.html"
+    ],
+
+    SASS_flies = [
+        "./assets/sass/1-first/**/*.sass",
+        "./assets/sass/**/*.sass"
+    ],
+
+    dist_SASS_files = "./";
+
 gulp.task('html',
     function ()
     {
-        return gulp.src("./site/**/*.html")
+        return gulp.src(HTML_files)
             .pipe(browserSync.reload({stream: true}));
     }
 );
 
-gulp.task('css',
+gulp.task('sass',
     function ()
     {
-        return gulp.src([
-                "./site/assets/sass/1-first/**/*.sass",
-                "./site/assets/sass/**/*.sass"
-            ])
+        return gulp.src(SASS_flies)
             .pipe(concat('style.sass'))
             .pipe(SASS_to_CSS({ outputStyle: 'expanded' }).on("error", notify.onError()))
             .pipe(concat('style.css'))
@@ -29,7 +41,7 @@ gulp.task('css',
                 browsers: ['last 300 versions']
             }))
             .pipe(min_CSS())
-            .pipe(gulp.dest("./site"))
+            .pipe(gulp.dest(dist_SASS_files))
             .pipe(browserSync.reload({stream: true}));
     }
 );
@@ -39,7 +51,7 @@ gulp.task('serve',
     {
         browserSync(
             {
-                proxy: "127.0.0.1:4000",
+                proxy: proxy,
                 open: false,
                 // notify: false,
 		        // online: false, // Work Offline Without Internet Connection
@@ -52,9 +64,9 @@ gulp.task('serve',
 gulp.task('watch',
     function ()
     {
-        gulp.watch("./site/**/*.html", gulp.parallel('html'));
-        gulp.watch("./site/assets/sass/**/*.sass", gulp.parallel('css'));
+        gulp.watch(HTML_files, gulp.parallel('html'));
+        gulp.watch(SASS_flies, gulp.parallel('sass'));
     }
 );
 
-gulp.task('default', gulp.parallel('watch', 'html', 'css', 'serve'));
+gulp.task('default', gulp.parallel('watch', 'html', 'sass', 'serve'));
