@@ -2,7 +2,7 @@
 # source: "site"
 source: ./web-school-lectures/site
 baseurl: /web-school-lectures
-includes_dir: /web-school-lectures/_includes
+includes_dir: /web-school-lectures/site/_includes
 exclude: [assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, README.md]
 
 #Social
