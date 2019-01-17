@@ -1,6 +1,6 @@
 #Server
 # source: "site"
-source: "web-school-lectures/site"
+source: "./web-school-lectures/site"
 baseurl: "/web-school-lectures"
 exclude: [assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, README.md]
 
