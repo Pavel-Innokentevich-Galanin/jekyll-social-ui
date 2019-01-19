@@ -1,9 +1,9 @@
 #Server
 exclude: [assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, README.md]
-# base-url: 
-base-url: /web-school-lectures
+pg_base_url: /
+# pg_base_url: /web-school-lectures/
 
 #Social
 title: Web School Lectures
-description: "Social UI"
+description: Social UI
 authors: PavelGalanin2001
