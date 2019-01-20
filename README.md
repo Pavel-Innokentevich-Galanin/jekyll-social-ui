@@ -25,10 +25,24 @@
 
 ## How to run:
 
-### Gulp
-```$ gulp```
-(needs to be installed <strong>npm</strong>)
+### If not installed npm, gulp, ruby, ruby-bundler, jekyll
 
-### Jekyll
-```$ jekyll serve```
-(needs to be installed <strong>gem</strong>, <strong>jekyll</strong>)
+```$curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -```
+
+```$sudo apt-get install -y nodejs```
+
+```$sudo npm i -g gulp-cli```
+
+```$sudo npm i -g rimraf```
+
+```$sudo apt install ruby```
+
+```$sudo apt install jekyll```
+
+```$sudo apt install ruby-bundler```
+
+### For start
+
+```$ bundle exec jekyll serve```
+
+```$ gulp```
