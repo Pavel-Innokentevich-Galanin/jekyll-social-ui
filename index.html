@@ -1,22 +1,12 @@
 ---
+layout: default
 title: Главная
-description: It's Homework - make Social UI
+description: It's my Homework - make Social UI
 ---
-
-{% include head.html %}
-
-{% include profile.html %}
-
+{% include page-index/profile.html %}
 <div class="af-ptf-msg container">
-
-{% include activity-feed.html %}
-
-{% include people-to-follow.html %}
-
-{% include chat.html %}
-
+    {% include page-index/activity-feed.html %}
+    {% include page-index/people-to-follow.html %}
+    {% include page-index/chat.html %}
 </div><!-- af-ptf-msg -->
-
-{% include dialogues.html %}
-
-{% include foot.html %}
+{% include page-index/dialogues.html %}

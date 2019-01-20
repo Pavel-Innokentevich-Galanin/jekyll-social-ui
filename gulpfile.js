@@ -9,18 +9,15 @@ var
 
 var
     proxy = "127.0.0.1:4000",
-
     HTML_files = [
-        "./*.html",
-        "./_includes/**/*.html"
+        "./**/*.html",
+        "!./_site/**/*.html"
     ],
-
     SASS_flies = [
-        "./assets/sass/1-first/**/*.sass",
+        "./assets/sass/-var/**/*.sass",
         "./assets/sass/**/*.sass"
     ],
-
-    dist_SASS_files = "./";
+    dist_SASS_files = "./uploads/";
 
 gulp.task('html',
     function ()
@@ -36,7 +33,7 @@ gulp.task('sass',
         return gulp.src(SASS_flies)
             .pipe(concat('style.sass'))
             .pipe(SASS_to_CSS({ outputStyle: 'expanded' }).on("error", notify.onError()))
-            .pipe(concat('style.css'))
+            .pipe(concat('style.min.css'))
             .pipe(autoprefixer({
                 browsers: ['last 300 versions']
             }))
