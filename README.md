@@ -27,22 +27,22 @@
 
 ### If not installed npm, gulp, ruby, ruby-bundler, jekyll
 
-```$curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -```
+```$ curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -```
 
-```$sudo apt-get install -y nodejs```
+```$ sudo apt-get install -y nodejs```
 
-```$sudo npm i -g gulp-cli```
+```$ sudo npm i -g gulp-cli```
 
-```$sudo npm i -g rimraf```
+```$ sudo npm i -g rimraf```
 
-```$sudo apt install ruby```
+```$ sudo apt install ruby```
 
-```$sudo apt install jekyll```
+```$ sudo apt install jekyll```
 
-```$sudo apt install ruby-bundler```
+```$ sudo apt install ruby-bundler```
 
 ### For start
-
+  
 ```$ bundle exec jekyll serve```
 
 ```$ gulp```
