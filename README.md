@@ -42,6 +42,12 @@
 ```$ sudo apt install ruby-bundler```
 
 ### For start
+
+  At file ```_config.yml```
+  
+  uncoment ```# pg_base_url: /```
+  
+  comment ```pg_base_url: /web-school-lectures/```
   
 ```$ bundle exec jekyll serve```
 
