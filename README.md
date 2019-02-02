@@ -22,33 +22,36 @@
 ### Fonts:
 - Font Awesome (icons)
 - Open Sans
-
 ## How to run:
 
-### If not installed npm, gulp, ruby, ruby-bundler, jekyll
+### If not installed git, npm, gulp, rimraf, ruby, jekyll, ruby-bundler
 
-```$ curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -```
+$ ```sudo apt install git```
 
-```$ sudo apt-get install -y nodejs```
+$ ```sudo apt install npm```
 
-```$ sudo npm i -g gulp-cli```
+$ ```sudo npm i -g gulp-cli```
 
-```$ sudo npm i -g rimraf```
+$ ```sudo npm i -g rimraf```
 
-```$ sudo apt install ruby```
+$ ```sudo apt install ruby```
 
-```$ sudo apt install jekyll```
+$ ```sudo apt install jekyll```
 
-```$ sudo apt install ruby-bundler```
+$ ```sudo apt install ruby-bundler```
 
-### For start
+### For the first run
 
-  At file ```_config.yml```
+$ ```npm i```
+
+At file ```_config.yml```
   
   uncoment ```# pg_base_url: /```
   
   comment ```pg_base_url: /web-school-lectures/```
-  
-```$ bundle exec jekyll serve```
 
-```$ gulp```
+### For start server
+
+$ ```bundle exec jekyll serve```
+
+$ ```gulp```
