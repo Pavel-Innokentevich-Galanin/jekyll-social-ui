@@ -1,38 +1,39 @@
-## Web School Lectures
+# Web School Lectures
 
-### Web hosting:
-- [GitHub Pages](https://pavelgalanin2001.github.io/web-school-lectures/)
-  
-### Languages:
-- HTML
-- CSS (FlexBox)
-  - SASS
+## Install Git
 
-### Builder:
-- Gulp:
-  - ```browser-sync``` - auto refresh browser page
-  - ```gulp``` - project builder with tasks
-  - ```gulp-autoprefixer``` - autoprefixer for CSS
-  - ```gulp-clean-css``` - min CSS
-  - ```gulp-concat``` - collect files into one file
-  - ```gulp-notify``` - show error notification
-  - ```gulp-sass``` - compile SASS to CSS
-- Jekyll - HTML builder
+Linux | Windows
+-|-
+$ `sudo apt install git` | view on official site
 
-### Fonts:
-- Font Awesome (icons)
-- Open Sans
-## How to run:
+---
 
-### If not installed git, npm, gulp, rimraf, ruby, jekyll, ruby-bundler
+## Clone git repo
 
-$ ```sudo apt install git```
+### Clone with HTTPS:
 
-$ ```sudo apt install npm```
+$ `git clone https://github.com/`authorOfThisRepository`/`nameOfThisRepository`.git`
 
-$ ```sudo npm i -g gulp-cli```
+### Clone with SSH:
 
-$ ```sudo npm i -g rimraf```
+Linux | Windows
+-|-
+$ `ssh-keygen` | > `ssh-keygen`
+$ `cat /home/"$USER"/.ssh/`id_rsa.pub | > `cd /d C:/Users/%UserName%/.ssh/` <br> > `type ` id_rsa.pub
+
+copy and active it at GitHub at settings
+
+$ `git clone git@github.com:`authorOfThisRepository`/`nameOfThisRepository`.git`
+
+---
+
+## Install Node JS
+
+Linux | Windows
+-|-
+$ `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -` <br> $ `sudo apt-get install -y nodejs` | view on official site
+
+## Install Ruby
 
 $ ```sudo apt install ruby```
 
@@ -40,18 +41,27 @@ $ ```sudo apt install jekyll```
 
 $ ```sudo apt install ruby-bundler```
 
-### For the first run
 
-$ ```npm i```
+---
 
-At file ```_config.yml```
+## How to update npm packages
+
+$ `sudo npx npm-check-updates -u`
+
+$ `sudo npm i`
+
+---
+
+## How to start work
+
+$ `npm i` - install node modules
+
+At file `_config.yml`
   
-  uncoment ```# pg_base_url: /```
+  uncoment `# pg_base_url: /`
   
-  comment ```pg_base_url: /web-school-lectures/```
+  comment `pg_base_url: /web-school-lectures/`
 
-### For start server
+Terminal 1 : $ `bundle exec jekyll serve`
 
-$ ```bundle exec jekyll serve```
-
-$ ```gulp```
+Terminal 2 : $ `gulp`
