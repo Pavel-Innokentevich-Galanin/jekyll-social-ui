@@ -1,4 +1,5 @@
 {
+  "homepage": "https://pavelgalanin2001.github.io/studying-jekyll/",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
