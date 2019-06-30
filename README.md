@@ -31,3 +31,5 @@ $ `npm i` // install node modules
 $ `npm run start` // start it at terminal №1
 
 $ `gulp` // start it at terminal №2
+
+open in browser http://localhost:3000/
