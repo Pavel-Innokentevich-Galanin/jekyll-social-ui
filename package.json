@@ -1,12 +1,13 @@
 {
-  "homepage": "https://pavelgalanin2001.github.io/studying-jekyll/",
-  "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^4.0.2"
-  }
+  "name": "studying-jekyll",
+  "version": "2019.6.30",
+  "description": "Jekyll website",
+  "main": "index.js",
+  "scripts": {
+    "start": "bundle exec jekyll serve"
+  },
+  "keywords": [],
+  "author": "PavelGalanin2001",
+  "license": "ISC",
+  "homepage": "https://pavelgalanin2001.github.io/studying-jekyll/"
 }
