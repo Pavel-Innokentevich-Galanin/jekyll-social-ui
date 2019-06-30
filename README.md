@@ -27,17 +27,9 @@ $ `git clone git@github.com:`authorOfThisRepository`/`nameOfThisRepository`.git`
 
 ---
 
-## Install Node JS
+[Install Node JS](https://docs.google.com/presentation/d/11vHUY2OodQbXOe9hyw_CNbGqzGKIraU8jLYQu4EViB4/edit?usp=sharing)
 
-Linux
-
-$ `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
-
-$ `sudo apt-get install -y nodejs`
-
-Windows
-
-view on official site
+---
 
 ## Install Ruby
 
