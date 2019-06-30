@@ -1,31 +1,6 @@
 # Web School Lectures
 
-## Install Git
-
-Linux | Windows
--|-
-$ `sudo apt install git` | view on official site
-
----
-
-## Clone git repo
-
-### Clone with HTTPS:
-
-$ `git clone https://github.com/`authorOfThisRepository`/`nameOfThisRepository`.git`
-
-### Clone with SSH:
-
-Linux | Windows
--|-
-$ `ssh-keygen` | > `ssh-keygen`
-$ `cat /home/"$USER"/.ssh/`id_rsa.pub | > `cd /d C:/Users/%UserName%/.ssh/` <br> > `type ` id_rsa.pub
-
-copy and active it at GitHub at settings
-
-$ `git clone git@github.com:`authorOfThisRepository`/`nameOfThisRepository`.git`
-
----
+[How to Install Git and clone repository](https://docs.google.com/presentation/d/1sZlVTpHjKiU3MuWp9cF9IMTbA_gDOkb-rDumLkZ5mhg/edit?usp=sharing)
 
 [Install Node JS](https://docs.google.com/presentation/d/11vHUY2OodQbXOe9hyw_CNbGqzGKIraU8jLYQu4EViB4/edit?usp=sharing)
 
@@ -38,7 +13,6 @@ $ ```sudo apt install ruby```
 $ ```sudo apt install jekyll```
 
 $ ```sudo apt install ruby-bundler```
-
 
 ---
 
