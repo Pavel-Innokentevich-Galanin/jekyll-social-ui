@@ -26,14 +26,8 @@ $ `sudo npm i`
 
 ## How to start work
 
-$ `npm i` - install node modules
+$ `npm i` // install node modules
 
-At file `_config.yml`
-  
-  uncoment `# pg_base_url: /`
-  
-  comment `pg_base_url: /web-school-lectures/`
+$ `npm run start` // start it at terminal №1
 
-Terminal 1 : $ `bundle exec jekyll serve`
-
-Terminal 2 : $ `gulp`
+$ `gulp` // start it at terminal №2
