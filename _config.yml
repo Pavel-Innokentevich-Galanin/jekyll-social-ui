@@ -1,7 +1,5 @@
 #Server
 exclude: [assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, README.md]
-# pg_base_url: /
-# pg_base_url: /jekyll-web-school-lectures/
 
 #Social
 title: Web School Lectures
