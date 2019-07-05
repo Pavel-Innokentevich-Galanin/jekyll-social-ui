@@ -4,17 +4,13 @@
 
 [Install Node JS](https://docs.google.com/presentation/d/11vHUY2OodQbXOe9hyw_CNbGqzGKIraU8jLYQu4EViB4/edit?usp=sharing)
 
----
+## Install Jekyll
 
-## Install Ruby
+$ `sudo apt update`
 
-$ ```sudo apt install ruby```
+$ `sudo apt upgrade`
 
-$ ```sudo apt install jekyll```
-
-$ ```sudo apt install ruby-bundler```
-
----
+$ `sudo apt install jekyll`
 
 ## How to update npm packages
 
@@ -28,7 +24,7 @@ $ `sudo npm i`
 
 $ `npm i` // install node modules
 
-$ `npm run start` // start it at terminal №1
+$ `jekyll serve` // start it at terminal №1
 
 $ `gulp` // start it at terminal №2
 
