@@ -1,5 +1,5 @@
 {
-  "name": "studying-jekyll",
+  "name": "web-school-lectures",
   "version": "2019.6.30",
   "description": "Jekyll website",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "PavelGalanin2001",
   "license": "ISC",
-  "homepage": "https://pavelgalanin2001.github.io/studying-jekyll/",
+  "homepage": "https://pavelgalanin2001.github.io/web-school-lectures/",
   "dependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
