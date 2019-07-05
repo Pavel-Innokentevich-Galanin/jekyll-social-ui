@@ -1,5 +1,5 @@
 {
-  "name": "web-school-lectures",
+  "name": "jekyll-social-ui",
   "version": "2019.7.5",
   "description": "Jekyll website",
   "main": "gulpfile.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PavelGalanin2001/web-school-lectures.git"
+    "url": "git+https://github.com/PavelGalanin2001/jekyll-social-ui.git"
   },
   "keywords": [],
   "author": "PavelGalanin2001",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PavelGalanin2001/web-school-lectures/issues"
+    "url": "https://github.com/PavelGalanin2001/jekyll-social-ui/issues"
   },
-  "homepage": "https://pavelgalanin2001.github.io/web-school-lectures/",
+  "homepage": "https://pavelgalanin2001.github.io/jekyll-social-ui/",
   "dependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
