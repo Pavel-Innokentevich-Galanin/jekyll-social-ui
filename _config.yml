@@ -1,7 +1,14 @@
-#Server
-exclude: [assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, README.md]
+# Jekyll
+exclude:
+  - assets
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - README.md
 
-#Social
+# Varibles
 title: Web School Lectures
 description: Social UI
 authors: PavelGalanin2001
