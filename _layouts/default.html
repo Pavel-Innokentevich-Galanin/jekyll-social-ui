@@ -1,5 +1,15 @@
-{% include header/head.html %}
-<!-- content ========== -->
-{{ content }}
-<!-- /content -->
-{% include footer/foot.html %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+{% include components/Head/Head.html %}
+<body>
+    <div class="wrapper">
+        <div class="content">
+            {% include components/Header/Header.html %}
+            {{ content }}
+        </div>
+        {% include components/Footer/Footer.html %}
+    </div>
+</body>
+</html>

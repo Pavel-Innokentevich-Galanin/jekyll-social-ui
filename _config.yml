@@ -6,6 +6,7 @@ exclude:
   - Gemfile.lock
   - gulpfile.js
   - package.json
+  - package-lock.json
   - README.md
 
 # Varibles
