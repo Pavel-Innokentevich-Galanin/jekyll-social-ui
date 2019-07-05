@@ -12,6 +12,10 @@ $ `sudo apt upgrade`
 
 $ `sudo apt install jekyll`
 
+## Instal Gulp-cli
+
+$ `npm i -g gulp-cli`
+
 ## How to update npm packages
 
 $ `sudo npx npm-check-updates -u`
