@@ -1,4 +1,5 @@
 const
+    PROXY = '127.0.0.1:4000/jekyll-social-ui/',
     SRC = {
         HTML: [
             './**/*.html',
@@ -16,8 +17,7 @@ const
     WATCH = {
         HTML: SRC['HTML'],
         SASS: SRC['SASS']
-    },
-    proxy = '127.0.0.1:4000';
+    };
 
 const
     browserSync  = require("browser-sync"),
@@ -49,7 +49,7 @@ gulp.task('sass', function () {
 
 gulp.task('serve', function () {
     browserSync({
-        proxy: proxy,
+        proxy: PROXY,
         open: false,
         notify: true,
         tunnel: false

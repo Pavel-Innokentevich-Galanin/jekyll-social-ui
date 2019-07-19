@@ -1,4 +1,5 @@
 # Jekyll
+baseurl: '/jekyll-social-ui'
 exclude:
   - assets
   - node_modules
