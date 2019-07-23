@@ -1,19 +1,27 @@
 {
   "name": "jekyll-social-ui",
-  "version": "2019.7.19",
+  "version": "2019.7.23",
   "description": "Jekyll website",
   "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PavelGalanin2001/jekyll-social-ui.git"
   },
   "keywords": [
-    "website",
-    "web",
-    "site",
     "Jekyll",
     "Gulp",
     "HTML",
@@ -25,14 +33,5 @@
   "bugs": {
     "url": "https://github.com/PavelGalanin2001/jekyll-social-ui/issues"
   },
-  "homepage": "https://github.com/PavelGalanin2001/jekyll-social-ui#readme",
-  "dependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^4.0.2"
-  }
+  "homepage": "https://github.com/PavelGalanin2001/jekyll-social-ui#readme"
 }
