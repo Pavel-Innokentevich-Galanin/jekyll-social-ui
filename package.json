@@ -15,6 +15,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "jekyll": "cd ./docs; jekyll serve",
     "gulp": "gulp"
   },
   "repository": {
