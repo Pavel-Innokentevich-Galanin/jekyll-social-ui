@@ -31,9 +31,7 @@ gulp.task('sass', function () {
                 .on( "error", notify.onError() )
         )
         .pipe(concat('styles.css'))
-        .pipe(autoprefixer({
-            browsers: ['last 300 versions']
-        }))
+        .pipe(autoprefixer())
         .pipe(clean_css())
         .pipe(gulp.dest(DIST['SASS']))
         .pipe(browserSync.reload({ stream: true }));
