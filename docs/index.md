@@ -5,7 +5,7 @@ description: It's my Homework - make Social UI
 ---
 
 {% include Profile/Profile.html %}
-<div class="af-ptf-msg container">
+<div class="af-ptf-msg">
     {% include Windows/ActivityFeed/ActivityFeed.html %}
     {% include Windows/PeopleToFollow/PeopleToFollow.html %}
     {% include Windows/Chat/Chat.html %}
