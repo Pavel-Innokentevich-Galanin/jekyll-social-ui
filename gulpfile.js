@@ -2,21 +2,16 @@ const
     PROXY = '127.0.0.1:4000/jekyll-social-ui/',
     SRC = {
         HTML: [
-            './**/*.html',
-            '!./**/node_modules/**/*.html',
-            '!./**/_site/**/*.html'
+            './docs/**/*.html',
+            '!./docs/_site/**/*.html'
         ],
         SASS: [
-            './_includes/constants/**/*.sass',
-            './_includes/**/*.sass'
+            './docs/consts/**/*.sass',
+            './docs/**/*.sass'
         ]
     },
     DIST = {
-        SASS: './uploads/' 
-    },
-    WATCH = {
-        HTML: SRC['HTML'],
-        SASS: SRC['SASS']
+        SASS: './docs/dist/' 
     };
 
 const
@@ -28,16 +23,13 @@ const
     notify       = require("gulp-notify"),
     sass         = require("gulp-sass");
 
-gulp.task('html', function () {
-    return gulp.src(SRC['HTML'])
-        .pipe(browserSync.reload({ stream: true }));
-});
-
 gulp.task('sass', function () {
     return gulp.src(SRC['SASS'])
         .pipe(concat('style.sass'))
-        .pipe(sass({ outputStyle: 'expanded' })
-        .on("error", notify.onError()))
+        .pipe(
+            sass( { outputStyle: 'expanded' } )
+                .on( "error", notify.onError() )
+        )
         .pipe(concat('style.css'))
         .pipe(autoprefixer({
             browsers: ['last 300 versions']
@@ -57,8 +49,8 @@ gulp.task('serve', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(WATCH['HTML'], gulp.parallel('html'));
-    gulp.watch(WATCH['SASS'], gulp.parallel('sass'));
+    gulp.watch(SRC['HTML']).on('change', browserSync.reload);
+    gulp.watch(SRC['SASS'], gulp.parallel('sass'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'html', 'sass', 'serve'));
+gulp.task('default', gulp.parallel('watch', 'sass', 'serve'));
