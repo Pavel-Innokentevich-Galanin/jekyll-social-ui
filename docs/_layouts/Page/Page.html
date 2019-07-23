@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include components/Head/Head.html %}
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="container page__block">
+                {% include components/Header/Header.html %}
+                {{ content }}
+            </div>
+        </div>
+        {% include components/Footer/Footer.html %}
+    </div>
+</body>
+
+</html>
