@@ -25,12 +25,12 @@ const
 
 gulp.task('sass', function () {
     return gulp.src(SRC['SASS'])
-        .pipe(concat('style.sass'))
+        .pipe(concat('styles.sass'))
         .pipe(
             sass( { outputStyle: 'expanded' } )
                 .on( "error", notify.onError() )
         )
-        .pipe(concat('style.css'))
+        .pipe(concat('styles.css'))
         .pipe(autoprefixer({
             browsers: ['last 300 versions']
         }))
