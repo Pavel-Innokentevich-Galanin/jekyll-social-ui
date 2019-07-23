@@ -8,4 +8,4 @@ Terminal 1: $ `npm run jekyll` // start server
 
 Terminal 2: $ `npm run gulp` // start gulp
 
-Open in browser http://localhost:3000/
+Open in browser http://localhost:3000/jekyll-social-ui/
