@@ -1,0 +1,9 @@
+.if-mobile__text
+    display: none
+    text-align: center
+
+@media ( max-width: calc(#{$mobileWidth} + 64px) )
+    .if-mobile
+        display: none
+        &__text
+            display: block

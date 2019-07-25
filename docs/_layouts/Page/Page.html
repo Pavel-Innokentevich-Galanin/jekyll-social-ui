@@ -6,7 +6,8 @@
 <body>
     <div class="wrapper">
         <div class="content">
-            <div class="container">
+            {% include IfMobile/IfMobile.html %}
+            <div class="container if-mobile">
                 {% include Header/Header.html %}
                 <div class="page__block">
                     {{ content }}
