@@ -1,8 +1,4 @@
 {
-  "name": "jekyll-social-ui",
-  "version": "2019.7.23",
-  "description": "Jekyll website",
-  "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -14,25 +10,7 @@
     "gulp-sass": "^4.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "jekyll": "cd ./docs; jekyll serve",
     "gulp": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PavelGalanin2001/jekyll-social-ui.git"
-  },
-  "keywords": [
-    "Jekyll",
-    "Gulp",
-    "HTML",
-    "CSS",
-    "SASS"
-  ],
-  "author": "PavelGalanin2001",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PavelGalanin2001/jekyll-social-ui/issues"
-  },
-  "homepage": "https://github.com/PavelGalanin2001/jekyll-social-ui#readme"
+  }
 }
