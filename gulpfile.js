@@ -1,20 +1,22 @@
+const path = require('path');
+
 const PATHS = {
     proxy: '127.0.0.1:4000/jekyll-social-ui/',
     src: {
         HTML: [
-            './**/*.html',
-            '!./_site/**/*.html',
-            '!./node_modules/**/*.html',
+            path.resolve(__dirname, '_site/**'),
+            path.resolve(__dirname, 'node_modules/**'),
+            path.resolve(__dirname, '**/*.html'),
         ],
         SASS: [
-            './src/consts/**/*.sass',
-            './**/*.sass',
-            '!./_site/**/*.sass',
-            '!./node_modules/**/*.sass',
+            path.resolve(__dirname, '_site/**'),
+            path.resolve(__dirname, 'node_modules/**'),
+            path.resolve(__dirname, 'src/consts/**/*.sass'),
+            path.resolve(__dirname, '**/*.sass'),
         ]
     },
     dist: {
-        SASS: './_public/dist/'
+        SASS: path.resolve(__dirname, '_public/dist'),
     },
 };
 
