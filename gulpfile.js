@@ -1,45 +1,48 @@
-const
-    PROXY = '127.0.0.1:4000/jekyll-social-ui/',
-    SRC = {
+const PATHS = {
+    proxy: '127.0.0.1:4000/jekyll-social-ui/',
+    src: {
         HTML: [
-            './docs/**/*.html',
-            '!./docs/_site/**/*.html'
+            './**/*.html',
+            '!./_site/**/*.html',
+            '!./node_modules/**/*.html',
         ],
         SASS: [
-            './docs/consts/**/*.sass',
-            './docs/**/*.sass'
+            './src/consts/**/*.sass',
+            './**/*.sass',
+            '!./_site/**/*.sass',
+            '!./node_modules/**/*.sass',
         ]
     },
-    DIST = {
-        SASS: './docs/dist/' 
-    };
+    dist: {
+        SASS: './_public/dist/'
+    },
+};
 
-const
-    browserSync  = require("browser-sync"),
-    gulp         = require("gulp"),
-    autoprefixer = require("gulp-autoprefixer"),
-    clean_css    = require("gulp-clean-css"),
-    concat       = require("gulp-concat"),
-    notify       = require("gulp-notify"),
-    sass         = require("gulp-sass");
+const browserSync = require("browser-sync");
+const gulp = require("gulp");
+const autoprefixer = require("gulp-autoprefixer");
+const clean_css = require("gulp-clean-css");
+const concat = require("gulp-concat");
+const notify = require("gulp-notify");
+const sass = require("gulp-sass");
 
 gulp.task('sass', function () {
-    return gulp.src(SRC['SASS'])
+    return gulp.src(PATHS.src.SASS)
         .pipe(concat('styles.sass'))
         .pipe(
-            sass( { outputStyle: 'expanded' } )
-                .on( "error", notify.onError() )
+            sass({ outputStyle: 'expanded' })
+                .on("error", notify.onError())
         )
         .pipe(concat('styles.css'))
         .pipe(autoprefixer())
         .pipe(clean_css())
-        .pipe(gulp.dest(DIST['SASS']))
+        .pipe(gulp.dest(PATHS.dist.SASS))
         .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('serve', function () {
     browserSync({
-        proxy: PROXY,
+        proxy: PATHS.proxy,
         open: false,
         notify: true,
         tunnel: false
@@ -47,8 +50,12 @@ gulp.task('serve', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(SRC['HTML']).on('change', browserSync.reload);
-    gulp.watch(SRC['SASS'], gulp.parallel('sass'));
+    gulp.watch(PATHS.src.HTML).on('change', browserSync.reload);
+    gulp.watch(PATHS.src.SASS, gulp.parallel('sass'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'sass', 'serve'));
+gulp.task('default', gulp.parallel(
+    'watch',
+    'sass',
+    'serve'
+));
