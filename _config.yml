@@ -7,6 +7,10 @@ exclude:
   - package-lock.json
   - package.json
   - README.md
+collections:
+  public:
+    output: true
+    permalink: /:path
 
 # Varibles
 title: Social UI
