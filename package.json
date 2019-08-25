@@ -10,7 +10,7 @@
     "gulp-sass": "^4.0.2"
   },
   "scripts": {
-    "jekyll": "cd ./docs; jekyll serve",
+    "jekyll": "jekyll s",
     "gulp": "gulp"
   }
 }
