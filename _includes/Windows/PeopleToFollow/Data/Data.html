@@ -1,38 +1,26 @@
 {% for element in site.data.people-to-follow.data %}
 <div class="people-to-follow__people">
 
-
         <div class="people-to-follow__people-img">
-            {% if element.people-img %}
             <a href="{{ element.people-img.url }}">
                 <img src="{{ element.people-img.src }}" alt="" />
             </a>
-            {% endif %}
             {% if element.online == 1 %}<i class="fas fa-circle"></i>{% endif %}
         </div>
 
-
         <div class="people-to-follow__people-info">
             <div class="people-to-follow__people-name">
-                {% if element.profile-link %}
-                <a href="{{ element.profile-link }}">
-                    {% if element.name %}{{ element.name }}{% endif %}
-                </a>
-                {% endif %}
+                <a href="{{ element.profile-link }}">{{ element.name }}</a>
                 {% if element.mobile == 1 %}<i class="fas fa-mobile-alt"></i>{% endif %}
             </div>
             <div class="people-to-follow__people-script">
-                {% if element.status %}<span>{{ element.status }}</span>{% endif %}
+                <span>{{ element.status }}</span>
             </div>
         </div>
 
-
-        {% if element.link-add-follow %}
         <div class="people-to-follow__people-button">
             <a href="{{ element.link-add-follow }}">+ Add</a>
         </div>
-        {% endif %}
-
 
     </div>
 {% endfor %}
