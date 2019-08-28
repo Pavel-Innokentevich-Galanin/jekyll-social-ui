@@ -1,94 +1,17 @@
 <div class="dialogues__chats-list-peoples">
-    <!-- 1 -->
+    {% for element in site.data.dialogues-list.data %}
     <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people dialogues__chats-list-people--focus">
-            <div class="dialogues__chats-list-people-img"><img src="{{ site.baseurl }}/dist/img/profile/1.jpg" alt=""></div>
+        <div
+            class="dialogues__chats-list-people {% if element.read == 0 %}dialogues__chats-list-people--focus{% endif %}">
+            <div class="dialogues__chats-list-people-img"><img src="{{ element.src }}" alt=""></div>
             <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">Alex Wayne</div>
-                <div class="dialogues__chats-list-people-msg">Lorem ipsum dolor</div>
+                <div class="dialogues__chats-list-people-name">{{ element.name }}</div>
+                <div class="dialogues__chats-list-people-msg">{{ element.msg }}</div>
             </div>
-            <span class="dialogues__chats-list-people-time">1:55 PM</span>
-            <span class="dialogues__chats-list-people-number">1</span>
+            <span class="dialogues__chats-list-people-time">{{ element.time }}</span>
+            {% if element.number %}<span
+                class="dialogues__chats-list-people-number">{{ element.number }}</span>{% endif %}
         </div>
     </a>
-    <!-- 2 -->
-    <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people">
-            <div class="dialogues__chats-list-people-img"><img src="{{ site.baseurl }}/dist/img/profile/2.jpg" alt=""></div>
-            <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">David Vane</div>
-                <div class="dialogues__chats-list-people-msg">Vestibulum ac diam sit met...</div>
-            </div>
-            <span class="dialogues__chats-list-people-time">11:39 PM</span>
-        </div>
-    </a>
-    <!-- 3 -->
-    <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people">
-            <div class="dialogues__chats-list-people-img"><img src="{{ site.baseurl }}/dist/img/profile/6.jpg" alt=""></div>
-            <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">Nancy Dilan</div>
-                <div class="dialogues__chats-list-people-msg">Quam vehicula.</div>
-            </div>
-            <span class="dialogues__chats-list-people-time">0:28 AM</span>
-        </div>
-    </a>
-    <!-- 4 -->
-    <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people">
-            <div class="dialogues__chats-list-people-img"><img src="{{ site.baseurl }}/dist/img/profile/3.jpg" alt=""></div>
-            <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">Norman Kenney</div>
-                <div class="dialogues__chats-list-people-msg">Nulla quis lorem ut libero...</div>
-            </div>
-            <span class="dialogues__chats-list-people-time">Jul 19</span>
-        </div>
-    </a>
-    <!-- 5 -->
-    <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people dialogues__chats-list-people--focus">
-            <div class="dialogues__chats-list-people-img"><img src="{{ site.baseurl }}/dist/img/profile/7.jpg" alt=""></div>
-            <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">James Dilan</div>
-                <div class="dialogues__chats-list-people-msg">Vivamus magna justo!</div>
-            </div>
-            <span class="dialogues__chats-list-people-time">Jul 16</span>
-            <span class="dialogues__chats-list-people-number">3</span>
-        </div>
-    </a>
-    <!-- 6 -->
-    <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people">
-            <div class="dialogues__chats-list-people-img"><img src="{{ site.baseurl }}/dist/img/profile/8.jpg" alt=""></div>
-            <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">Mike Dorn</div>
-                <div class="dialogues__chats-list-people-msg">Praesent sapien massa.</div>
-            </div>
-            <span class="dialogues__chats-list-people-time">Jul 2</span>
-        </div>
-    </a>
-    <!-- 7 -->
-    <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people">
-            <div class="dialogues__chats-list-people-img"><img src="{{ site.baseurl }}/dist/img/profile/9.jpg" alt=""></div>
-            <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">Patrick Morison</div>
-                <div class="dialogues__chats-list-people-msg">Convallis a pellentesque...</div>
-            </div>
-            <span class="dialogues__chats-list-people-time">Jun 30, 12</span>
-        </div>
-    </a>
-    <!-- 8 -->
-    <a href="#link-to-msg">
-        <div class="dialogues__chats-list-people">
-            <div class="dialogues__chats-list-people-img">
-                <a href="#link-to-profile"><img src="{{ site.baseurl }}/dist/img/profile/4.jpg" alt=""></a>
-            </div>
-            <div class="dialogues__chats-list-people-name-and-msg">
-                <div class="dialogues__chats-list-people-name">Anna Doe</div>
-                <div class="dialogues__chats-list-people-msg">Lorem, ipsum dolor</div>
-            </div>
-            <span class="dialogues__chats-list-people-time">Jun 29, 11</span>
-        </div>
-    </a>
+    {% endfor %}
 </div>
