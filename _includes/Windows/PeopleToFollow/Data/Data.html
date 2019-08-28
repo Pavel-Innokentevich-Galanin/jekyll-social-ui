@@ -1,104 +1,38 @@
-<!-- people-to-follow__people -->
+{% for element in site.data.people-to-follow.data %}
 <div class="people-to-follow__people">
-    <div class="people-to-follow__people-img">
-        <a href="#link-to-img"><img src="{{ site.baseurl }}/dist/img/profile/1.jpg" alt=""></a>
-        <i class="fas fa-circle"></i>
-    </div>
-    <div class="people-to-follow__people-info">
-        <div class="people-to-follow__people-name">
-            <a href="#link-to-profile-n">Alex Wayne</a>
-            <i class="fas fa-mobile-alt"></i>
+
+
+        <div class="people-to-follow__people-img">
+            {% if element.people-img %}
+            <a href="{{ element.people-img.url }}">
+                <img src="{{ element.people-img.src }}" alt="" />
+            </a>
+            {% endif %}
+            {% if element.online == 1 %}<i class="fas fa-circle"></i>{% endif %}
         </div>
-        <div class="people-to-follow__people-script">
-            <span>Artist</span>
+
+
+        <div class="people-to-follow__people-info">
+            <div class="people-to-follow__people-name">
+                {% if element.profile-link %}
+                <a href="{{ element.profile-link }}">
+                    {% if element.name %}{{ element.name }}{% endif %}
+                </a>
+                {% endif %}
+                {% if element.mobile == 1 %}<i class="fas fa-mobile-alt"></i>{% endif %}
+            </div>
+            <div class="people-to-follow__people-script">
+                {% if element.status %}<span>{{ element.status }}</span>{% endif %}
+            </div>
         </div>
-    </div>
-    <div class="people-to-follow__people-button">
-        <a href="#link-add-follow">+ Add</a>
-    </div>
-</div><!-- /people-to-follow__people -->
-<div class="people-to-follow__people">
-    <div class="people-to-follow__people-img">
-        <a href="#link-to-img"><img src="{{ site.baseurl }}/dist/img/profile/2.jpg" alt=""></a>
-        <i class="fas fa-circle"></i>
-    </div>
-    <div class="people-to-follow__people-info">
-        <div class="people-to-follow__people-name">
-            <a href="#link-to-profile-n">David Vane</a>
+
+
+        {% if element.link-add-follow %}
+        <div class="people-to-follow__people-button">
+            <a href="{{ element.link-add-follow }}">+ Add</a>
         </div>
-        <div class="people-to-follow__people-script">
-            <span>Out of town</span>
-        </div>
+        {% endif %}
+
+
     </div>
-    <div class="people-to-follow__people-button">
-        <a href="#link-add-follow">+ Add</a>
-    </div>
-</div><!-- /people-to-follow__people -->
-<div class="people-to-follow__people">
-    <div class="people-to-follow__people-img">
-        <a href="#link-to-img"><img src="{{ site.baseurl }}/dist/img/profile/3.jpg" alt=""></a>
-    </div>
-    <div class="people-to-follow__people-info">
-        <div class="people-to-follow__people-name">
-            <a href="#link-to-profile-n">Kevin Ertan</a>
-        </div>
-        <div class="people-to-follow__people-script">
-            <span>Don't sleep</span>
-        </div>
-    </div>
-    <div class="people-to-follow__people-button">
-        <a href="#link-add-follow">+ Add</a>
-    </div>
-</div><!-- /people-to-follow__people -->
-<div class="people-to-follow__people">
-    <div class="people-to-follow__people-img">
-        <a href="#link-to-img"><img src="{{ site.baseurl }}/dist/img/profile/4.jpg" alt=""></a>
-        <i class="fas fa-circle"></i>
-    </div>
-    <div class="people-to-follow__people-info">
-        <div class="people-to-follow__people-name">
-            <a href="#link-to-profile-n">Jane Doe</a>
-            <i class="fas fa-mobile-alt"></i>
-        </div>
-        <div class="people-to-follow__people-script">
-            <span>Artist</span>
-        </div>
-    </div>
-    <div class="people-to-follow__people-button">
-        <a href="#link-add-follow">+ Add</a>
-    </div>
-</div><!-- /people-to-follow__people -->
-<div class="people-to-follow__people">
-    <div class="people-to-follow__people-img">
-        <a href="#link-to-img"><img src="{{ site.baseurl }}/dist/img/profile/5.jpg" alt=""></a>
-    </div>
-    <div class="people-to-follow__people-info">
-        <div class="people-to-follow__people-name">
-            <a href="#link-to-profile-n">Alexsandr Wilk</a>
-        </div>
-        <div class="people-to-follow__people-script">
-            <span>Stay Hungry</span>
-        </div>
-    </div>
-    <div class="people-to-follow__people-button">
-        <a href="#link-add-follow">+ Add</a>
-    </div>
-</div><!-- /people-to-follow__people -->
-<div class="people-to-follow__people">
-    <div class="people-to-follow__people-img">
-        <a href="#link-to-img"><img src="{{ site.baseurl }}/dist/img/profile/1.jpg" alt=""></a>
-        <i class="fas fa-circle"></i>
-    </div>
-    <div class="people-to-follow__people-info">
-        <div class="people-to-follow__people-name">
-            <a href="#link-to-profile-n">Alex Wayne</a>
-            <i class="fas fa-mobile-alt"></i>
-        </div>
-        <div class="people-to-follow__people-script">
-            <span>Artist</span>
-        </div>
-    </div>
-    <div class="people-to-follow__people-button">
-        <a href="#link-add-follow">+ Add</a>
-    </div>
-</div><!-- /people-to-follow__people -->
+{% endfor %}
