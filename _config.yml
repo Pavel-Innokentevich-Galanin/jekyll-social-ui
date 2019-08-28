@@ -13,6 +13,7 @@ collections:
     permalink: /:path
 
 # Varibles
+site_url: https://PavelGalanin2001.github.io/jekyll-social-ui
 title: Social UI
 description: ...
 authors: PavelGalanin2001
