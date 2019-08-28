@@ -1,54 +1,35 @@
-<!-- chat__msgs -->
 <div class="chat__msgs">
-    <!-- 1 -->
-    <div class="chat__b-msg-1-people">
-        <div class="chat__msg-1-people">
-            Vestibulum ante ipsum primis in faucibus.
-        </div>
-        <time class="chat__time-1-people">
-            Sat, Aug 23, 1:08 PM
-        </time>
-    </div>
-    <!-- 2 -->
-    <div class="chat__b-msg-1-people">
-        <div class="chat__msg-1-people">
-            Cras ultricies ligula.
-        </div>
-        <time class="chat__time-1-people">
-            Sat, Aug 23, 1:08 PM
-        </time>
-    </div>
-    <!-- 3 -->
-    <div class="chat__b-msg-2-people">
-            <div class="chat__msg-2-people">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.
+    {% for element in site.data.chat.data %}
+
+
+        {% if element.b-msg %}
+
+
+        <div
+            class="chat__b-msg-{{ element.b-msg.number }}-people {% if element.b-msg.error %}chat__b-msg-1-people--error{% endif %}">
+            <div class="chat__msg-{{ element.b-msg.number }}-people">
+                {{ element.b-msg.msg }}
             </div>
-            <time class="chat__time-2-people">
-                Sat, Aug 23, 1:10 PM
+            <time class="chat__time-{{ element.b-msg.number }}-people">
+                {{ element.b-msg.time }}
             </time>
         </div>
-    <!-- new day -->
-    <div class="chat__b-msg-new-day">
-        <div class="chat__b-msg-new-day-line"></div>
-        <div class="chat__b-msg-new-day-data">Sunday, August 24</div>
-        <div class="chat__b-msg-new-day-line"></div>
-    </div>
-    <!-- 4 -->
-    <div class="chat__b-msg-1-people chat__b-msg-1-people--error">
-        <div class="chat__msg-1-people">
-            Cras ultricies ligula.
+
+        
+        {% else %}
+
+
+        {% if element.b-new-day %}
+        <div class="chat__b-msg-new-day">
+            <div class="chat__b-msg-new-day-line"></div>
+            <div class="chat__b-msg-new-day-data">{{ element.b-new-day }}</div>
+            <div class="chat__b-msg-new-day-line"></div>
         </div>
-        <time class="chat__time-1-people">
-            5 minute ago
-        </time>
-    </div>
-    <!-- 5 -->
-    <div class="chat__b-msg-2-people">
-        <div class="chat__msg-2-people">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.
-        </div>
-        <time class="chat__time-2-people">
-            Sat, Aug 24, 2:45 PM
-        </time>
-    </div>
-</div><!-- /chat__msgs -->
+        {% endif %}
+
+
+        {% endif %}
+
+
+    {% endfor %}
+</div>
