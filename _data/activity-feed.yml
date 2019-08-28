@@ -1,0 +1,29 @@
+data:
+# 1
+  - icon: '<i class="far fa-images"></i>'
+    b-img-name:
+      title: 'Kevin Ertan'
+      url: '#link-to-profile-n'
+    info: 'Added 4 photos to album <a href="#link-to-album">Summer</a>'
+    b-img-imgs: '<a href="#link-to-img"><img src="/jekyll-social-ui/dist/img/actifity-feed/1.jpg" alt=""></a>
+        <a href="#link-to-img"><img src="/jekyll-social-ui/dist/img/actifity-feed/2.jpg" alt=""></a>
+        <a href="#link-to-img"><img src="/jekyll-social-ui/dist/img/actifity-feed/3.jpg" alt=""></a>
+        <a href="#link-to-img"><img src="/jekyll-social-ui/dist/img/actifity-feed/4.jpg" alt=""></a>'
+# 2
+  - icon: '<i class="fas fa-thumbs-up"></i>'
+    info: '<a href="#link-to-profile">John Doe</a> liked 2 photos of <a href="#link-to-profile">Alex Wayne</a>'
+    b-img-imgs: '<a href="#link-to-img"><img src="/jekyll-social-ui/dist/img/actifity-feed/5.jpg" alt=""></a>
+          <a href="#link-to-img"><img src="/jekyll-social-ui/dist/img/actifity-feed/6.jpg" alt=""></a>'
+# 3
+  - icon: '<i class="fas fa-user"></i>'
+    info: '<a href="#link-to-profile">John Doe</a> added <a href="#link-to-profile">Alex Wayne</a> to friends'
+# 4
+  - icon: '<i class="far fa-calendar"></i>'
+    info: '<a href="#link-to-profile">Alex Gilev</a> created the <a href="#link-to-profile">Bowling</a> event'
+# 5
+  - icon: '<i class="fas fa-volume-off"></i>'
+    info: '<a href="#link-to-profile">David Vane</a> shared a link:'
+    b-link-info:
+        img: '<a href="#link-to-link"><img src="/jekyll-social-ui/dist/img/actifity-feed/7.jpg" alt=""></a>'
+        name: '<a href="#link-to-link">Lorem, ipsum dolor.</a>'
+        sm-text: 'Lorem, ipsum dolor sit amet consectetur.'
