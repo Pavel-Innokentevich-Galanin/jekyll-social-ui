@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-{% include Head/Head.html %}
-
-<body>
-    <div class="wrapper">
-        <div class="content">
-            {% include IfMobile/IfMobile.html %}
-            <div class="container if-mobile">
-                {% include Header/Header.html %}
-                <div class="page__block">
-                    {{ content }}
-                </div>
-            </div>  
-        </div>
-        {% include Footer/Footer.html %}
-    </div>
-</body>
-
-</html>
+<div class="page__block">
+    {{ content }}
+</div>
