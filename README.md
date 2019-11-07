@@ -6,10 +6,6 @@ Open website [here](https://pavelgalanin2001.github.io/jekyll-social-ui)
 
 ## How to start work
 
-$ `npm i` // install node modules
-
-Terminal 1: $ `npm run jekyll` // start server
-
-Terminal 2: $ `npm run gulp` // start gulp
+$ `jekyll s`
 
 Open in browser http://localhost:3000/jekyll-social-ui/
