@@ -1,11 +1,22 @@
-# Social UI
+## Develop
 
-![Website](https://img.shields.io/website/https/pavelgalanin2001.github.io/jekyll-social-ui?style=for-the-badge)
+Terminal 1:
 
-Open website [here](https://pavelgalanin2001.github.io/jekyll-social-ui)
+```
+npm run dev
+```
 
-## How to start work
+Terminal 2:
 
-$ `jekyll s`
+```
+jekyll s
+```
 
-Open in browser http://localhost:3000/jekyll-social-ui/
+## Production
+
+Terminal:
+
+```
+npm run build
+npm run deploy
+```

@@ -1,0 +1,37 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="{{ page.description }}{{ site.data.vars.description }}" />
+    <meta name="author" content="{{ site.data.vars.authors }}" />
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
+    <meta name="theme-color" content="#06c" />
+
+
+    <title>{{ page.title }} | {{ site.data.vars.title }}</title>
+
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/dist/styles.css?ver={{ site.time | date: '%Y-%m-%d_%H-%M' }}" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            {% include IfMobile.html %}
+            <div class="container if-mobile ">
+                {% include Header/Header.html %}
+                {{ content }}
+            </div>
+        </div>
+        {% include Footer.html %}
+    </div>
+</body>
+
+</html>

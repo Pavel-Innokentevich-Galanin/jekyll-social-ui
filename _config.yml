@@ -1,19 +1,6 @@
-# Jekyll
+source: ./src-jekyll
 baseurl: '/jekyll-social-ui'
-exclude:
-  - node_modules
-  - src
-  - gulpfile.js
-  - package-lock.json
-  - package.json
-  - README.md
 collections:
-  public:
+  pages:
     output: true
     permalink: /:path
-
-# Varibles
-site_url: https://PavelGalanin2001.github.io/jekyll-social-ui
-title: Social UI
-description: ...
-authors: PavelGalanin2001

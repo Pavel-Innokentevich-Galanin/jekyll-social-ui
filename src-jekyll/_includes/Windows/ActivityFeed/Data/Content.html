@@ -1,0 +1,48 @@
+<div class="activity-feed__b-content">
+
+    {% if element.b-img-name %}
+    <div class="activity-feed__b-img-name">
+        <a href="{{ site.baseurl }}{{ element.b-img-name.url }}">{{ element.b-img-name.title }}</a>
+    </div>
+    {% endif %}
+
+    {% if element.info %}
+    <div class="activity-feed__b-info">
+        {{ element.info }}
+    </div>
+    {% endif %}
+
+    {% if element.b-link-info %}
+    <div class="activity-feed__b-link-info">
+
+        {% if element.b-link-info.img %}
+        <div class="activity-feed__b-link-info-img">
+            {{ element.b-link-info.img }}
+        </div>
+        {% endif %}
+
+        <div class="activity-feed__b-link-info-text">
+
+            {% if element.b-link-info.name %}
+            <div class="activity-feed__b-link-info-name">
+                {{ element.b-link-info.name }}
+            </div>
+            {% endif %}
+
+            {% if element.b-link-info.sm-text %}
+            <div class="activity-feed__b-link-info-sm-text">
+                {{ element.b-link-info.sm-text }}
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+    {% endif %}
+
+    {% if element.b-img-imgs %}
+    <div class="activity-feed__b-img-imgs">
+        {{ element.b-img-imgs }}
+    </div>
+    {% endif %}
+
+</div>

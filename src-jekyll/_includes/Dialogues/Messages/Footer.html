@@ -1,0 +1,21 @@
+<footer class="dialogues__messages-footer">
+    <div>
+        <input class="dialogues__messages-footer-input" type="text" />
+        <div class="dialogues__messages-footer-b-smile-and-menu">
+            <div class="dialogues__messages-footer-b-smile">
+                <a href="#"><i class="far fa-grin-alt"></i></a>
+                <div class="dialogues__messages-footer-b-smiles">
+                    {% for element in site.data.dialogues-smile.data %}
+                    <a href="{{ site.baseurl }}{{ element.url }}">{{ element.smile }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="dialogues__messages-footer-b-menu">
+                <a href="#">Attach <i class="fas fa-caret-down"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="dialogues__messages-footer-b-button">
+        <a href="#">Send</a>
+    </div>
+</footer>

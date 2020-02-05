@@ -1,0 +1,23 @@
+{
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.7.4",
+        "css-loader": "^3.4.2",
+        "file-loader": "^5.0.2",
+        "gh-pages": "^2.2.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "node-sass": "^4.13.1",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.2",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    },
+    "scripts": {
+        "build": "jekyll clean & npm run prod & jekyll build",
+        "deploy": "gh-pages -d _site",
+        "dev": "webpack --config webpack.dev.js",
+        "prod": "webpack --config webpack.prod.js"
+    }
+}
