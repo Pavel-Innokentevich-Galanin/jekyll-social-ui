@@ -18,7 +18,7 @@
 
 {% for element in site.pages %}
 <url>
-  <loc>{{ site.data.vars.site_url }}{{ element.url }}</loc>
+  <loc>{{ site.data.vars.site_url }}{{ element.url | remove:'index' }}</loc>
   <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.5</priority>

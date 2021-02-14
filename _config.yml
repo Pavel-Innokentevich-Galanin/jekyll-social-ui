@@ -1,6 +1,17 @@
-source: ./src-jekyll
-baseurl: '/jekyll-social-ui'
+baseurl: /jekyll-social-ui
+
 collections:
+  public:
+    output: true
+    permalink: /:path
   pages:
     output: true
     permalink: /:path
+
+exclude:
+  - docker-compose.yml
+  - README-ru.md
+  - README.md
+
+sass:
+  style: compressed

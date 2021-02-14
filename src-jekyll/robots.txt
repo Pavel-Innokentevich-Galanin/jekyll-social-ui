@@ -1,6 +1,0 @@
----
----
-
-User-agent: *
-Host: {{ site.site_url }}
-Sitemap: {{ site.site_url }}/sitemap.xml

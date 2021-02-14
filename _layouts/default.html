@@ -14,11 +14,15 @@ layout: compress
     <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
     <meta name="theme-color" content="#06c" />
 
-
     <title>{{ page.title }} | {{ site.data.vars.title }}</title>
 
+    {% if jekyll.environment == "production" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles.css?ver={{ site.time | date: '%Y-%m-%d_%H-%M' }}" />
+    {% else %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles.css" />
+    {% endif %}
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/dist/styles.css?ver={{ site.time | date: '%Y-%m-%d_%H-%M' }}" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/libs/fontawesome-free-5.15.2-web/css/all.min.css" />
 </head>
 
 <body>
