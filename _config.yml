@@ -1,4 +1,4 @@
-baseurl: /jekyll-social-ui
+baseurl: /IT-Shark-pro_web-school
 
 collections:
   public:
@@ -9,6 +9,7 @@ collections:
     permalink: /:path
 
 exclude:
+  - docs
   - docker-compose.yml
   - README-ru.md
   - README.md
