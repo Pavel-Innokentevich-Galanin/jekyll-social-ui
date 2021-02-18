@@ -31,7 +31,8 @@ $ tree --charset ascii
 |-- _public             //folder that moves content to the root of the site
 |-- _sass               //folder with SASS styles
 |-- _site               //folder with the finished site
+|-- docs                //documents, tasks
 `-- docker-compose.yml  //docker, which raises the VM
 
-7 directories
+8 directories
 ```

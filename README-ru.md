@@ -31,7 +31,8 @@ $ tree --charset ascii
 |-- _public             //папка, которая перемещает контент в корень сайта
 |-- _sass               //папка со стилями SASS
 |-- _site               //папка с готовым сайтом
+|-- docs                //документы, задания
 `-- docker-compose.yml  //docker, который поднимает виртуальную машину
 
-7 directories
+8 directories
 ```
