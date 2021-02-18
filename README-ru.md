@@ -14,8 +14,6 @@
 sudo docker-compose up
 ```
 
-Открываем сайт http://0.0.0.0:4000/jekyll-social-ui/
-
 ---
 
 ## Дерево проекта

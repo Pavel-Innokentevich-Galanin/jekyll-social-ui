@@ -14,8 +14,6 @@ Running `docker-compose.yml`:
 sudo docker-compose up
 ```
 
-Opening the site http://0.0.0.0:4000/jekyll-social-ui/
-
 ---
 
 ## Project Tree
