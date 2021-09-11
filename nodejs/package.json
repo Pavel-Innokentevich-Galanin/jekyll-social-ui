@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "deploy": "gh-pages -d ../srv/jekyll/_site"
+    },
+    "devDependencies": {
+        "gh-pages": "^3.2.3"
+    }
+}
