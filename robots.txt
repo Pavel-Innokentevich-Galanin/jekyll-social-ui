@@ -1,0 +1,3 @@
+User-agent: *
+Host: https://Pavel-Innokentevich-Galanin.github.io/jekyll-social-ui
+Sitemap: https://Pavel-Innokentevich-Galanin.github.io/jekyll-social-ui/sitemap.xml
