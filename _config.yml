@@ -1,0 +1,18 @@
+baseurl: /2018-Epam-ItSharkPro-HtmlCssHomework
+
+collections:
+  public:
+    output: true
+    permalink: /:path
+  pages:
+    output: true
+    permalink: /:path
+
+exclude:
+  - docs
+  - docker-compose.yml
+  - README-ru.md
+  - README.md
+
+sass:
+  style: compressed

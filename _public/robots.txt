@@ -1,0 +1,6 @@
+---
+---
+
+User-agent: *
+Host: {{ site.data.vars.site_url }}
+Sitemap: {{ site.data.vars.site_url }}/sitemap.xml

@@ -1,0 +1,54 @@
+[
+    {
+        "src": "/imgs/profile/1.jpg",
+        "name": "Alex Wayne",
+        "msg": "Lorem ipsum dolor",
+        "time": "1:55 PM",
+        "number": 1,
+        "read": 0
+    },
+    {
+        "src": "/imgs/profile/2.jpg",
+        "name": "David Vane",
+        "msg": "Vestibulum ac diam sit met...",
+        "time": "11:39 PM"
+    },
+    {
+        "src": "/imgs/profile/6.jpg",
+        "name": "Nancy Dilan",
+        "msg": "Quam vehicula.",
+        "time": "0:28 AM"
+    },
+    {
+        "src": "/imgs/profile/3.jpg",
+        "name": "Norman Kenney",
+        "msg": "Nulla quis lorem ut libero...",
+        "time": "Jul 19"
+    },
+    {
+        "src": "/imgs/profile/7.jpg",
+        "name": "James Dilan",
+        "msg": "Vivamus magna justo!",
+        "time": "Jul 16",
+        "number": 3,
+        "read": 0
+    },
+    {
+        "src": "/imgs/profile/8.jpg",
+        "name": "Mike Dorn",
+        "msg": "Praesent sapien massa.",
+        "time": "Jul 2"
+    },
+    {
+        "src": "/imgs/profile/9.jpg",
+        "name": "Patrick Morison",
+        "msg": "Convallis a pellentesque...",
+        "time": "Jun 30, 12"
+    },
+    {
+        "src": "/imgs/profile/4.jpg",
+        "name": "Anna Doe",
+        "msg": "Lorem, ipsum dolor",
+        "time": "Jun 29, 11"
+    }
+]

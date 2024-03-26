@@ -1,0 +1,35 @@
+<div class="chat__msgs">
+    {% for element in site.data.chat %}
+
+
+        {% if element.b-msg %}
+
+
+        <div
+            class="chat__b-msg-{{ element.b-msg.number }}-people {% if element.b-msg.error %}chat__b-msg-1-people--error{% endif %}">
+            <div class="chat__msg-{{ element.b-msg.number }}-people">
+                {{ element.b-msg.msg }}
+            </div>
+            <time class="chat__time-{{ element.b-msg.number }}-people">
+                {{ element.b-msg.time }}
+            </time>
+        </div>
+
+        
+        {% else %}
+
+
+        {% if element.b-new-day %}
+        <div class="chat__b-msg-new-day">
+            <div class="chat__b-msg-new-day-line"></div>
+            <div class="chat__b-msg-new-day-data">{{ element.b-new-day }}</div>
+            <div class="chat__b-msg-new-day-line"></div>
+        </div>
+        {% endif %}
+
+
+        {% endif %}
+
+
+    {% endfor %}
+</div>
